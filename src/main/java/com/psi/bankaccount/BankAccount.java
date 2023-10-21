@@ -10,11 +10,11 @@ import jakarta.persistence.Id;
 public class BankAccount {
     private @Id @GeneratedValue Long id;
     private String accountName;
-    private Long accountBalance;
+    private Integer accountBalance;
 
     BankAccount(){}
 
-    BankAccount(String accountName, Long accountBalance){
+    BankAccount(String accountName, Integer accountBalance){
         this.accountName = accountName;
         this.accountBalance = accountBalance;
     }
@@ -27,7 +27,7 @@ public class BankAccount {
         return this.accountName;
     }
 
-    public Long getAccountBalance(){
+    public Integer getAccountBalance(){
         return this.accountBalance;
     }
   
@@ -39,7 +39,7 @@ public class BankAccount {
         this.accountName = accountName;
     }
 
-    public void changeAccountBalance(Long amount){
+    public void changeAccountBalance(Integer amount){
         this.accountBalance = accountBalance + amount;
     }
 
